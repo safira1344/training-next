@@ -16,6 +16,8 @@ export default function PageTeste() {
         <div>
             <h1 className="text-center mt-5 mb-2 font-bold text-3xl">Página Client</h1>
 
+            <button onClick={() => alert("teste")}>TESTE</button>
+            
             <div className="flex flex-col gap-4 mx-2">
                 {posts.map((post: any) => (
                     <div className="bg-gray-200 p-4 rounded-md" key={post.id}>
