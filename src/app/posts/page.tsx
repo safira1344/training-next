@@ -15,7 +15,12 @@ interface ResponseProps {
 // SERVER COMPONENTS - renderizado pelo lado do server
 export default async function PostsPage() {
 
-    const response = await fetch('https://dummyjson.com/posts')
+    const response = await fetch('https://dummyjson.com/posts', {
+        cache: 'force-cache',
+        next: {
+            revalidate: 60
+        }
+    })
     const data: ResponseProps = await response.json()
 
     // é possível fazer com que uma função tenha a diretiva para usar server ou client
