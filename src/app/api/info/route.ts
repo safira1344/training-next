@@ -1,4 +1,4 @@
-
+// requisicao GET json
 export async function GET() {
     return Response.json({
         name: 'Fernanda Mirely',
